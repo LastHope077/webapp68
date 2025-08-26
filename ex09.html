@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fade Siblings on Hover</title>
+  <style>
+    .case-list {
+      display: flex;
+      gap: 40px;
+      margin: 30px 0 0 20px;
+      font-family: 'Times New Roman', serif;
+      font-size: 1.3em;
+    }
+    .case-item {
+      transition: opacity 0.3s;
+      cursor: pointer;
+    }
+    /* เมื่อ hover ที่ .case-list แล้วมี .case-item ถูก hover */
+    .case-list:has(.case-item:hover) .case-item {
+      opacity: 0.3;
+    }
+    /* ยกเว้นตัวที่ hover ให้ไม่จาง */
+    .case-list .case-item:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="case-list">
+    <div class="case-item">Case 1</div>
+    <div class="case-item">Case 2</div>
+    <div class="case-item">Case 3</div>
+  </div>
+</body>
+</html>

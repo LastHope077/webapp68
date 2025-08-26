@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Text Overlay with Preview</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+      padding: 30px;
+    }
+
+    .preview-box {
+      border: 2px solid #888;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #fff;
+      width: fit-content;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .preview-label {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .image-container {
+      position: relative;
+      width: 400px;
+      height: 250px;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+    }
+
+    .overlay-text {
+      color: white;
+      font-size: 26px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-box">
+    <div class="preview-label">Preview:</div>
+    <div class="image-container">
+      <img src="flower.jpg" alt="Purple Flower">
+      <div class="overlay">
+        <div class="overlay-text">Hello, World</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

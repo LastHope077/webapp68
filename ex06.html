@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Focus Appearance</title>
+  <style>
+    body {
+      background: #e5e2de;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      margin: 40px auto;
+      width: 90%;
+      max-width: 1200px;
+      background: #fff;
+      border: 4px solid #ccc;
+      padding: 30px;
+    }
+    form {
+      border: 3px solid #b8a74a;
+      padding: 20px 30px;
+      width: 95%;
+      max-width: 1100px;
+      margin: 0 auto;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    form:focus-within {
+      box-shadow: 0 0 0 3px #e5e2de;
+      border-color: #b8a74a;
+      /* สามารถเพิ่มเอฟเฟกต์อื่นได้ */
+    }
+    .form-row {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+    label {
+      font-family: 'Times New Roman', serif;
+      font-size: 1.3em;
+      width: 120px;
+      color: #444;
+    }
+    input[type="text"],
+    input[type="password"] {
+      font-size: 1.1em;
+      padding: 6px 10px;
+      border: 2px solid #aaa;
+      border-radius: 2px;
+      width: 250px;
+      margin-left: 10px;
+      transition: border-color 0.2s;
+    }
+    input:focus {
+      border-color: #b8a74a;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form>
+      <div class="form-row">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+      </div>
+      <div class="form-row">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+      </div>
+    </form>
+  </div>
+</body>
+</html>

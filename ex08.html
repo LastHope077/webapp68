@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Popout Menu on Hover/Focus</title>
+  <style>
+    .menu-wrapper {
+      position: relative;
+      display: inline-block;
+      margin: 40px 0 0 40px;
+    }
+    .menu-btn {
+      width: 100px;
+      height: 100px;
+      background: #bb66f7;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      outline: none;
+      display: block;
+      transition: box-shadow 0.2s;
+    }
+    .popout-menu {
+      position: absolute;
+      top: 110px;
+      left: 0;
+      min-width: 140px;
+      background: #fff;
+      border: 1.5px solid #bb66f7;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+      transition: opacity 0.2s, transform 0.2s;
+      z-index: 10;
+    }
+    .menu-wrapper:hover .popout-menu,
+    .menu-wrapper:focus-within .popout-menu {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    .popout-menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 10px 0;
+    }
+    .popout-menu li {
+      padding: 8px 20px;
+      cursor: pointer;
+      color: #7d3fc7;
+      font-size: 1.05em;
+      transition: background 0.15s;
+    }
+    .popout-menu li:hover,
+    .popout-menu li:focus {
+      background: #f3eaff;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-wrapper">
+    <button class="menu-btn" aria-haspopup="true" aria-expanded="false" tabindex="0"></button>
+    <nav class="popout-menu" tabindex="-1">
+      <ul>
+        <li tabindex="0">Menu 1</li>
+        <li tabindex="0">Menu 2</li>
+        <li tabindex="0">Menu 3</li>
+      </ul>
+    </nav>
+  </div>
+</body>
+</html>
