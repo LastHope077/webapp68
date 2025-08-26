@@ -79,6 +79,13 @@ nav a:focus {
     outline: none;
 }
 
+a.contact-btn {
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+}
+
 .contact-btn {
     width: 120px;
     height: 50px;
